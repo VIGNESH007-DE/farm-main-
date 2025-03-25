@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #228B22, #FFD700, #006400);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 0.8s forwards ease-out;
+        }
+
+        .button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Farm Matrix</h1>
+    <div class="button-container">
+        <a href="#" class="button">AI CHAT BOT</a>
+        <a href="https://matrix-news-hub.vercel.app/" class="button" target="_blank">MATRIX NEWS</a>
+        <a href="#" class="button">WEATHER CONDITION</a>
+        <a href="#" class="button">DISEASE DETECTION</a>
+        <a href="#" class="button">HARVEST VEHICLE BUY</a>
+    </div>
+</body>
+</html>
