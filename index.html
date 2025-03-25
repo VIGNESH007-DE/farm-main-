@@ -28,7 +28,8 @@
 
         .button-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 15px;
             margin-top: 20px;
         }
@@ -41,11 +42,12 @@
             text-decoration: none;
             font-size: 1.2rem;
             transition: all 0.3s ease;
-            display: inline-block;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
             opacity: 0;
             transform: scale(0.8);
             animation: fadeInScale 0.8s forwards ease-out;
-            cursor: pointer;
         }
 
         .button:hover {
