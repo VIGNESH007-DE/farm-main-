@@ -76,6 +76,15 @@
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             width: 80%;
+            height: 400px;
+            overflow: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -83,18 +92,20 @@
     <h1>Farm Matrix</h1>
     
     <div class="button-container">
-        <button class="button" onclick="changeContent('AI Chat Bot Content')">AI CHAT BOT</button>
-        <button class="button" onclick="changeContent('Matrix News Content')">MATRIX NEWS</button>
-        <button class="button" onclick="changeContent('Weather Condition Details')">WEATHER CONDITION</button>
-        <button class="button" onclick="changeContent('Disease Detection System Info')">DISEASE DETECTION</button>
-        <button class="button" onclick="changeContent('Harvest Vehicle Buying Guide')">HARVEST VEHICLE BUY</button>
+        <button class="button" onclick="changeContent('https://your-ai-chat-bot-link.com')">AI CHAT BOT</button>
+        <button class="button" onclick="changeContent('https://matrix-news-hub.vercel.app/')">MATRIX NEWS</button>
+        <button class="button" onclick="changeContent('https://your-weather-condition-link.com')">WEATHER CONDITION</button>
+        <button class="button" onclick="changeContent('https://your-disease-detection-link.com')">DISEASE DETECTION</button>
+        <button class="button" onclick="changeContent('https://your-harvest-vehicle-buy-link.com')">HARVEST VEHICLE BUY</button>
     </div>
 
-    <div id="content">Click a button to display content here...</div>
+    <div id="content">
+        <iframe id="iframeContent" src=""></iframe>
+    </div>
 
     <script>
-        function changeContent(text) {
-            document.getElementById("content").innerHTML = text;
+        function changeContent(url) {
+            document.getElementById("iframeContent").src = url;
         }
     </script>
 </body>
